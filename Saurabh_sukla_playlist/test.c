@@ -1,9 +1,15 @@
 #include<stdio.h>
+#include<string.h>
 
 int main(){
 
-printf("hello world !");
-printf("hello world !");
-printf("hello world !");
-    return 0;
+char str[]="hardik";
+char str1[]="dabhi";
+strcpy(str,str1);
+printf( "%s",str);
+char i = ' ';
+printf("\n%d",i);
+
+return 0;
 }
+
