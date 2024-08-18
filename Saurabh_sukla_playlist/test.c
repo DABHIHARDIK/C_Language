@@ -1,16 +1,20 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include<stdio.h> 
 
-void fun(int p[]){
-    int temp[] = p ;
-    printf("%d",sizeof(temp)/sizeof(temp[0]));
-    
+void revstr(char *str){
+    int strlen = 0 ; 
+    printf(" Input string :- %s\n",str);
+    for(; str[strlen]!='\0';strlen++);
+    printf("strlen is %d\n",strlen);
+    for(int loop = 0 ; loop < strlen/2;loop++){
+        str[loop] = str[loop]^str[strlen - loop - 1]; 
+        str[strlen - loop - 1] = str[loop]^str[strlen - loop - 1]; 
+        str[loop] = str[loop]^str[strlen - loop - 1]; 
+    }
+    printf("After reverse string is :- %s",str);
+
 }
-
-
 int main(){
-
-int a[5]={1,2,3,4,5};
-fun(a);    
-    return 0 ; 
+    char str[]= "hardik dabhi";
+    revstr(str);
+    return 0; 
 }
