@@ -1,10 +1,12 @@
 #include<stdio.h> 
 
+ int main(){
 
-int main(){
 
-    int *ptr = NULL; 
-    if ( !ptr)
-    printf("true ");
+    int  i =0 ; 
+    // for ( ; i < 1000 ; i++){
+    //     printf( " %d", i);
+    // }
+    printf( " %lu " ,sizeof(i));
     return 0 ; 
-}
+ }
