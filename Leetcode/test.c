@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+#include<stdio.h> 
+
+ int main(){
+
+
+    int  i =0 ; 
+    // for ( ; i < 1000 ; i++){
+    //     printf( " %d", i);
+    // }
+    printf( " %lu " ,sizeof(i));
+    return 0 ; 
+ }
+=======
  #include<stdio.h> 
  #include<stdlib.h>
 #include<string.h> 
@@ -17,3 +31,4 @@ printf("%s",ptr);
  }
 
 
+>>>>>>> refs/remotes/origin/main
