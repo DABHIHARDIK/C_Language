@@ -1,13 +1,22 @@
-#include<stdio.h> 
-struct temp {
-   float id ;
-   char name[29];
 
-};
-struct temp obj ; 
-int main(){
-   printf( " %d ", sizeof(obj));
-   // short int i = 2; 
-   // printf("%d",i);
-   return 0 ; 
-}
+#include<stdio.h> 
+
+ int main(){
+
+
+    int  i =0 ; 
+    // for ( ; i < 1000 ; i++){
+    //     printf( " %d", i);
+    // }
+    printf( " %lu " ,sizeof(i));
+    return 0 ; 
+ }
+
+ #include<stdio.h> 
+ int main(){
+    for (int i = 0 ;i < 10 ; i++){
+        printf( " %d", i);
+    }
+    return 0 ; 
+
+ }
