@@ -1,2 +1,2 @@
-
-// printlist(head);
+ printf(" min is %d\n ",min);
+       

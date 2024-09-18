@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include<stdlib.h>
+#include"202_happy-number.c"
+#include<stdbool.h>
+
+
 
 typedef struct Node{
    int data; 
@@ -59,8 +63,9 @@ void deletenode(Head *head , int val){
    temp->next = temp->next->next;
    free(back);
 }
-int main() {
 
+int main() {
+printf(" %d " , isHappy(10));
 Head *head = NULL ; 
 head = addnode(head , 1 );
 head = addnode(head , 2 );

@@ -2,22 +2,22 @@
 #include<stdbool.h>
 #include<stdlib.h>
 
-bool isHappy(int n) {
+static int isHappy(int n) {
     int sum= 0; 
-    if (n < 10 ){
+    if (n < 7 ){
         if ( n == 1)
-            return true;
+            return 1;
         else
-            return false;
+            return 0;
     }
     while (n > 0)
     {
         sum += (n%10) * (n%10);        
         n /= 10;
     }
-    printf("sum value is %d\n",sum);
-    isHappy(sum);
     
+   return isHappy(sum);
+
 }
 
 int main(){
