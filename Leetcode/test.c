@@ -78,5 +78,6 @@ printlist(head);
 deletenode(head , 4);
 printlist(head);
 middleoflist(head);
+printlist(head);
     return 0;
 }
