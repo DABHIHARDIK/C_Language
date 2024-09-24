@@ -1,2 +1,2 @@
-
-   // printf("%d",i);
+ printf(" min is %d\n ",min);
+       
