@@ -38,3 +38,53 @@ void printlist(Node *head)
       temp = temp->next;
    }
 }
+<<<<<<< HEAD
+=======
+
+Head* reverselist(Head *head){
+   Head * curr = head , *prev = NULL , *next ;
+   while(curr != NULL){
+      next = curr->next;
+      curr->next = prev;
+      prev = curr ; 
+      curr = next ;
+   }
+   return prev ;
+}
+
+void middleoflist(Head *head){
+   Head * fast = head , *slow = head; 
+   while(fast != NULL && fast->next != NULL){
+      slow = slow->next;
+      fast = fast->next->next;
+   }
+   printf(" middle of list %d ", slow->data);
+}
+void deletenode(Head *head , int val){
+   Head *temp , *back ; 
+   while(temp->next->data != val){
+      temp = temp->next;
+   }
+   back = temp->next;
+   temp->next = temp->next->next;
+   free(back);
+}
+
+int main() {
+printf(" %d " , isHappy(10));
+Head *head = NULL ; 
+head = addnode(head , 1 );
+head = addnode(head , 2 );
+head = addnode(head , 3 );
+head = addnode(head , 4 );
+head = addnode(head , 5 );
+printlist(head);
+head = reverselist(head);
+printlist(head);
+deletenode(head , 4);
+printlist(head);
+middleoflist(head);
+printlist(head);
+    return 0;
+}
+>>>>>>> refs/remotes/origin/main
