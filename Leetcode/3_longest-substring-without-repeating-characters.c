@@ -1,52 +1,27 @@
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdbool.h>
+#include<stdlib.h> 
+#include<string.h>
 
 int lengthOfLongestSubstring(char* s) {
-    int count = 0 ; 
-    int store = 0 ; 
-    int i ,set = 0 ; 
-    for( i = 0 ; s[i]!='\0';i++);
-    char arr[i] ; 
-    for(i = 0 ; s[i]!='\0';i++){
-        count= 1 ; 
-        printf("i value is %d\n",i );
-        set = 0 ; 
-        for(int k = 0 ; s[k]!='\0';k++){
-            if (arr[k]==s[i])
-                set = 1 ; 
+    int max = 0 ; 
+    int smax = 0 ; 
+    bool atoz[26] = {0};
+    for(int i = 0 ; s[i] != '\0' ;i++){
+        if(atoz[ s[i] -'a'] == false){
+            atoz[ s[i] -'a'] = true;
+            smax++;
         }
-        if ( set == 1){
-        continue;;
+        else{
+            memset(atoz , 0 , sizeof(atoz));
+            smax = 0 ; 
         }
-        for ( int h = i+1 ; s[h]!='\0';h++){
-            printf("value of h is %d\n",h);
-            if ( s[h]==s[i]){
-                printf("if loop \n");
-            set = 0 ;
-            break;
-            }
-            else{
-            printf("else \n");
-            set = 1 ;
-            }  
-        }
-        if ( set == 1){
-        continue;;
-        }
-        for(int j = i+1 ; s[j]!='\0'&&s[j]!=s[i];j++){
-            printf("enter a for loop \n");
-            count++; 
-        }
-        arr[i]=s[i];
-        printf("count value is %d \n ",count);
-        if ( count > store){
-            store = count;
-        }
+        if(smax > max)
+            max = smax;
         
     }
-    printf(" value of store is %d",store);
-    return count;
-
+    printf("%d ", max);
+    return max;
 }
 
 int main(){
